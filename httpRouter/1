@@ -1,0 +1,12 @@
+package httpRouter
+
+import (
+	"net/http"
+	"iMediCS/crypto"
+	"iMediCS/httpModel"
+)
+
+func Router(){
+	http.HandleFunc("/keyStore", crypto.KeyStoreOut)
+	http.HandleFunc("/test", httpModel.Test)
+}
